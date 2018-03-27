@@ -1,0 +1,37 @@
+# http://www.dropwizard.io/1.0.3/docs/manual/configuration.html#man-configuration
+server:
+  type: default
+  maxThreads: 50
+  minThreads: 8
+  applicationConnectors:
+  - type: http
+    port: 9000
+  adminConnectors:
+  - type: http
+    port: 9001
+
+logging:
+  level: INFO
+  loggers:
+    com.intrence.backend: DEBUG
+#
+#postgres: hello
+#  host: localhost
+#  database: menu_service_dev
+#  adminPort: 15432
+#  sessionPort: 6432
+#  transactionPort: 5432
+#  properties:
+#    loginTimeout: 10
+#    socketTimeout: 5
+#  app:
+#    user: menu_service_dev
+#    pass: menu_service_dev
+#  dba:
+#    user: menu_service_dev
+#    pass: menu_service_dev
+
+elasticSearch:
+  clusterName: elasticsearch_wliu
+  port: 9300
+  nodesToConnect: localhost
